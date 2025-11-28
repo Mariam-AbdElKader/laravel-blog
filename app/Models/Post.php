@@ -23,4 +23,10 @@ class Post extends Model
             'is_active' => 'boolean',
         ];
     }
+
+
+    public function comments()
+    {
+        return $this->hasMany(Comment::class);
+    }
 }
