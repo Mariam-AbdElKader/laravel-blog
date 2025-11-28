@@ -5,7 +5,7 @@ use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('admin.posts.index');
 });
 
 Route::prefix('admin')->name('admin.')->group(function () {
