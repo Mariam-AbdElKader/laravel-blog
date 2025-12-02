@@ -9,6 +9,7 @@
         @endif
     </td>
     <td class="py-3 px-4">{{ $post->created_at->diffForHumans() }}</td>
+    <td class="py-3 px-4">{{ $post->comments_count }}</td>
     <td class="py-3 px-4">
         <a href="{{ route('admin.posts.show', $post) }}" class="text-yellow-400 hover:underline mr-2">Show</a>
         <a href="{{ route('admin.posts.edit', $post) }}" class="text-blue-400 hover:underline mr-2">Edit</a>

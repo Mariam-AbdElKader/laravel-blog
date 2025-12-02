@@ -23,6 +23,7 @@
                     <th class="py-3 px-4">Title</th>
                     <th class="py-3 px-4">Active</th>
                     <th class="py-3 px-4">Date</th>
+                    <th class="py-3 px-4">Comments Count</th>
                     <th class="py-3 px-4">Actions</th>
                 </tr>
             </thead>
