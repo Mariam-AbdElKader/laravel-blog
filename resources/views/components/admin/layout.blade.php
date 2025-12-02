@@ -9,7 +9,7 @@
 <body class="bg-gray-900 text-gray-200 min-h-screen flex flex-col">
   <!-- Header Navbar -->
   <header class="w-full bg-gray-800 shadow-lg p-4 flex justify-between items-center">
-    <h2 class="text-2xl font-bold">Marmazya Blog</h2>
+    <a href="{{ route('admin.dashboard') }}"><h2 class="text-2xl font-bold">Marmazya Blog</h2></a>
     <nav class="space-x-6 hidden md:flex">
       <a href="{{ route('admin.dashboard') }}" class="hover:text-gray-400">Home</a>
       <a href="{{ route('admin.posts.index') }}" class="text-gray-400">Posts</a>
