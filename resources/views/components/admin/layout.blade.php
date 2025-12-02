@@ -11,8 +11,18 @@
   <header class="w-full bg-gray-800 shadow-lg p-4 flex justify-between items-center">
     <a href="{{ route('admin.dashboard') }}"><h2 class="text-2xl font-bold">Marmazya Blog</h2></a>
     <nav class="space-x-6 hidden md:flex">
-      <a href="{{ route('admin.dashboard') }}" class="hover:text-gray-400">Home</a>
-      <a href="{{ route('admin.posts.index') }}" class="text-gray-400">Posts</a>
+    @auth
+    Welcome, {{ auth()->user()->name }} | &nbsp;
+        <a href="{{ route('admin.dashboard') }}" class="hover:text-gray-400">Home</a>
+        <a href="{{ route('admin.posts.index') }}" class="text-gray-400">Posts</a>
+        <form method="POST" action="{{ route('logout') }}" class="inline">
+            @csrf
+            <button type="submit" class="hover:text-gray-400">Logout</button>
+        </form>
+    @endauth
+    @guest
+        {{ Illuminate\Foundation\Inspiring::quotes()->random() }}
+    @endguest
     </nav>
   </header>
 
